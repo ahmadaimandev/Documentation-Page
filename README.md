@@ -4,7 +4,7 @@
 
 # Technical Documentation Page
 
-This survey form project is a part of the freeCodeCamp curriculum, specifically under the Responsive Web Design certification. The goal of this project is to build a functional and aesthetically pleasing survey form, using HTML for structure and CSS for styling.
+The Technical Documentation Page project is an exemplary demonstration of proficiency in HTML and CSS, showcasing the ability to create clear, concise, and well-structured technical documentation.
 
 
 ## Technology Used ⚡
