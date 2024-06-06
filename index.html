@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles.css">
-    <title>PHP Documentation</title>
+    <title>C# Documentation</title>
 </head>
 <body>
     <nav id="navbar">
@@ -23,17 +23,38 @@
                 <h1>Hello World!</h1>
             </header>
             <article>
-                <p>PHP commonly used programming language for the web today it is because relatively simple architecture compared to other MVC
-                    based frameworks (Python, Ruby, NodeJS, etc).
+                <p>C# is object-oriented programming language. In Object-Oriented Programming methodology, a program consist
+                    of various objects that interact with each other by means of actions.
                 </p>
+                <p>For example, let us consider a Rectangle object. It has attributes such as length and width. Depending
+                    upon the design, it may need ways for accepting the values of these attributes, calculating the area
+                    and displaying details.
+                </p>
+                <p>Let us look at implementation of a Rectangle class and discuss C# basic syntax:</p>
                 <code>
-                    <html>
-                        <head></head>
-                        <body>
-                            hello!
-                            <?php?>
-                        </body>
-                    </html>
+                    namespace RectangleApplication {
+                        class Rectangle {
+                            
+                            //member variables
+                            double length;
+                            double width;
+
+                            public void Acceptdetails() {
+                                length = 4.5;
+                                width = 3.5;
+                            }
+
+                            public double GetArea() {
+                                return length * width;
+                            }
+
+                            public void Display() {
+                                Console.WriteLine()
+                                Console.WriteLine()
+                                Console.WriteLine()
+                            }
+                        }
+                    }
                 </code>
             </article>
         </main>
