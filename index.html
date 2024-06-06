@@ -16,7 +16,7 @@
             <li><a href="#data_types">Data Types</a></li>
             <li><a href="#variables">Variables</a></li>
             <li><a href="#loops">Loops</a></li>
-            <li><a href=""></a></li>
+            <li><a href="#arrays">Array</a></li>
         </ul>
     </nav>
     <main id="main-doc">
@@ -174,19 +174,85 @@
                 <ul class="control-types">
                     <li>
                         <strong>break statement</strong>
+                        Terminates the loop or switch statement and transfers execution to the statement immediately following the loop or switch.
                     </li>
                     <li>
                         <strong>continue statement</strong>
+                        Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
                     </li>
                 </ul>
+                <code>
+                    using System;
+                    namespace Loops {
+                        class Program {
+                            static void Main(string[] args) {
+                                for (; ; ) {
+                                    Console.WriteLine("Hey! I am Trapped");
+                                }
+                            }
+                        }
+                    }
+                </code>
             </article>
         </section>
 
-        <section class="main-section" id="">
-            <header></header>
-        </section>
+        <section class="main-section" id="arrays">
+            <header>
+                <h1>Arrays</h1>
+            </header>
+            <article>
+                <p>
+                    An array stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, 
+                    but it is often more useful to think of an array as a collection of variables of the same type stored at contiguous memory locations
+                </p>
 
-        
+                <ul class="arrays-concept">
+                    <li>
+                        <strong>Multi-dimensional arrays</strong>
+                        C# supports multidimensional arrays. The simplest form of the multidimensional array is the two-dimensional array
+                    </li>
+                    <li>
+                        <strong>Jagged arrays</strong>
+                        C# supports multidimensional arrays, which are arrays of arrays.
+                    </li>
+                    <li>
+                        <strong>Passing arrays to functions</strong>
+                        You can pass to the function a pointer to an array by specifying the array's name without an index.
+                    </li>
+                    <li>
+                        <strong>Param arrays</strong>
+                        This is used for passing unknown number of parameters to a function.
+                    </li>
+                    <li>
+                        <strong>The Array Class</strong>
+                        Defined in System namespace, it is the base class to all arrays, and provides various properties and methods for working with arrays.
+                    </li>
+                </ul>
+
+                <code>
+                    using System;
+                    namespace ArrayApplication {
+                        class MyArray {
+                            static void Main(string[] args) {
+                                int []  n = new int[10]; /* n is an array of 10 integers */
+                                int i,j;
+
+                                /* initialize elements of array n */
+                                for ( i = 0; i < 10; i++ ) {
+                                    n[ i ] = i + 100;
+                                }
+
+                                /* output each array element's value */
+                                for (j = 0; j < 10; j++ ) {
+                                    Console.WriteLine("Element[{0}] = {1}", j, n[j]);
+                                }
+                                Console.ReadKey();
+                            }
+                        }
+                    }
+                </code>
+            </article>
+        </section>
     </main>
 </body>
 </html>
