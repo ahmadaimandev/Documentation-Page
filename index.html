@@ -12,11 +12,11 @@
             <h1>C# Documentation</h1>
         </header>
         <ul>
-            <li><a href="#hello_world">Hello World!</a></li>
-            <li><a href="#data_types">Data Types</a></li>
-            <li><a href="#variables">Variables</a></li>
-            <li><a href="#loops">Loops</a></li>
-            <li><a href="#arrays">Array</a></li>
+            <li class="nav-link"><a href="#hello_world">Hello World!</a></li>
+            <li class="nav-link"><a href="#data_types">Data Types</a></li>
+            <li class="nav-link"><a href="#variables">Variables</a></li>
+            <li class="nav-link"><a href="#loops">Loops</a></li>
+            <li class="nav-link"><a href="#arrays">Array</a></li>
         </ul>
     </nav>
     <main id="main-doc">
@@ -25,88 +25,82 @@
                 <h1>Hello World!</h1>
             </header>
             <article>
-                <p>C# is object-oriented programming language. In Object-Oriented Programming methodology, a program consist
-                    of various objects that interact with each other by means of actions.
-                </p>
-                <p>For example, let us consider a Rectangle object. It has attributes such as length and width. Depending
-                    upon the design, it may need ways for accepting the values of these attributes, calculating the area
-                    and displaying details.
-                </p>
-                <p>Let us look at implementation of a Rectangle class and discuss C# basic syntax:</p>
-                <code>
-                        using System;
-                        namespace RectangleApplication {
-                            class Rectangle {
+                <p>C# is an object-oriented programming language. In Object-Oriented Programming methodology, a program consists of various objects that interact with each other by means of actions.</p>
+                <p>For example, let us consider a Rectangle object. It has attributes such as length and width. Depending upon the design, it may need ways for accepting the values of these attributes, calculating the area and displaying details.</p>
+                <p>Let us look at the implementation of a Rectangle class and discuss C# basic syntax:</p>
+                <pre><code>
+    using System;
+    namespace RectangleApplication {
+        class Rectangle {
     
-                                // member variables
-                                double length;
-                                double width;
+            // member variables
+            double length;
+            double width;
     
-                                public void Acceptdetails() {
-                                    length = 4.5; 
-                                    width = 3.5;
-                                }
+            public void Acceptdetails() {
+                length = 4.5; 
+                width = 3.5;
+            }
     
-                                public double GetArea() {
-                                    return length * width; 
-                                }
+            public double GetArea() {
+                return length * width; 
+            }
     
-                                public void Display() {
-                                    Console.WriteLine("Length: {0}", length);
-                                    Console.WriteLine("Width: {0}", width);
-                                    Console.WriteLine("Area: {0}", GetArea());
-                                }
-                            }
+            public void Display() {
+                Console.WriteLine("Length: {0}", length);
+                Console.WriteLine("Width: {0}", width);
+                Console.WriteLine("Area: {0}", GetArea());
+            }
+        }
     
-                            class ExecuteRectangle {
-                                static void Main(string[] args) {
-                                    Rectangle r = new Rectangle();
-                                    r.Acceptdetails();
-                                    r.Display();
-                                    Console.ReadLine(); 
-                                }
-                            }
-                        }
-                    </code>
+        class ExecuteRectangle {
+            static void Main(string[] args) {
+                Rectangle r = new Rectangle();
+                r.Acceptdetails();
+                r.Display();
+                Console.ReadLine(); 
+            }
+        }
+    }
+                </code></pre>
                 <p>When the above code is compiled and executed, it produces the following result:</p>
-                <code>
-                        Length: 4.5
-                        Width: 3.5
-                        Area: 15.75
-                    </code>
+                <pre><code>
+    Length: 4.5
+    Width: 3.5
+    Area: 15.75
+                </code></pre>
             </article>
         </section>
     
         <section class="main-section" id="data_types">
             <header>
                 <h1>Data Types</h1>
-                <article>
-                    <p>The variables in C#, are categorized into the following types:</p>
-                    <ul class="data-types">
-                        <li>Value types</li>
-                        <li>Reference types</li>
-                        <li>Pointer types</li>
-                    </ul>
-                    <h2>Value type</h2>
-                    <p>Value type variables can be assigned a value directly. They are derived from the class
-                        <strong>System.ValueType</strong></p>
-                    <code>
-                            using System;
-                            namespace DataTypeApplication {
-                                class Program {
-                                    static void Main(string[] args) {
-                                        Console.WriteLine("Size of int: {0}", sizeof(int));
-                                        Console.ReadLine();
-                                    }
-                                }
-                            }
-                        </code>
-                    <p>When the above code is compiled and executed, it produces the following result:</p>
-                    <code>
-                            Size of int: 4
-                        </code>
-                </article>
             </header>
+            <article>
+                <p>The variables in C#, are categorized into the following types:</p>
+                <ul class="data-types">
+                    <li>Value types</li>
+                    <li>Reference types</li>
+                    <li>Pointer types</li>
+                </ul>
+                <h2>Value type</h2>
+                <p>Value type variables can be assigned a value directly. They are derived from the class <strong>System.ValueType</strong></p>
+                <pre><code>
+    using System;
+    namespace DataTypeApplication {
+        class Program {
+            static void Main(string[] args) {
+                Console.WriteLine("Size of int: {0}", sizeof(int));
+                Console.ReadLine();
+            }
+        }
+    }
+                </code></pre>
+                <p>When the above code is compiled and executed, it produces the following result:</p>
+                <pre><code>
+    Size of int: 4
+                </code></pre>
+            </article>
         </section>
     
         <section class="main-section" id="variables">
@@ -114,12 +108,7 @@
                 <h1>Variables</h1>
             </header>
             <article>
-                <p>
-                    A variable is nothing but a name given to a storage area that our programs can manipulate.
-                    Each variable in C# has a specific type, which determines the size and layout of the variable's memory the range 
-                    of values that can be stored within that memory and the set of operations that can be applied to the variable.
-                </p>
-
+                <p>A variable is nothing but a name given to a storage area that our programs can manipulate. Each variable in C# has a specific type, which determines the size and layout of the variable's memory, the range of values that can be stored within that memory and the set of operations that can be applied to the variable.</p>
                 <ul class="variable-types">
                     <li>Integral types</li>
                     <li>Floating Point types</li>
@@ -127,132 +116,85 @@
                     <li>Boolean types</li>
                     <li>Nullable types</li>
                 </ul>
-
-                <code>
-                    int d = 3, f = 5;    /* initializing d and f. */
-                    byte z = 22;         /* initializes z. */
-                    double pi = 3.14159; /* declares an approximation of pi. */
-                    char x = 'x';        /* the variable x has the value 'x'. */
-                </code>
+                <pre><code>
+    int d = 3, f = 5;    /* initializing d and f. */
+    byte z = 22;         /* initializes z. */
+    double pi = 3.14159; /* declares an approximation of pi. */
+    char x = 'x';        /* the variable x has the value 'x'. */
+                </code></pre>
             </article>
         </section>
-
-
+    
         <section class="main-section" id="loops">
             <header>
                 <h1>Loops</h1>
             </header>
             <article>
-                <p>
-                    There may be a situation, when you need to execute a block of code several number of times.
-                    In general, the statements are executed sequentially: The first statement in a function is executed first, 
-                    followed by the second, and so on.
-                </p>
-
+                <p>There may be a situation, when you need to execute a block of code several number of times. In general, the statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.</p>
                 <ul class="loop-types">
-                    <li>
-                        <strong>While</strong>
-                        It repeats a statement or a group of statements while a given condition is true.
-                        It test the condition before executing the loop body
-                    </li>
-                    <li>
-                        <strong>For</strong>
-                        It executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.
-                    </li>
-
-                    <li>
-                        <strong>Do..While</strong>
-                        It is similar to a while statement, except that it tests the condition at the end of the loop body
-                    </li>
-
-                    <li>
-                        <strong>Nested</strong>
-                        You can use one or more loop inside any another while, for or do..while loop.
-                    </li>
+                    <li><strong>While</strong> It repeats a statement or a group of statements while a given condition is true. It tests the condition before executing the loop body.</li>
+                    <li><strong>For</strong> It executes a sequence of statements multiple times and abbreviates the code that manages the loop variable.</li>
+                    <li><strong>Do..While</strong> It is similar to a while statement, except that it tests the condition at the end of the loop body.</li>
+                    <li><strong>Nested</strong> You can use one or more loops inside any other while, for, or do..while loop.</li>
                 </ul>
                 <h2>Loop Control Statements</h2>
                 <ul class="control-types">
-                    <li>
-                        <strong>break statement</strong>
-                        Terminates the loop or switch statement and transfers execution to the statement immediately following the loop or switch.
-                    </li>
-                    <li>
-                        <strong>continue statement</strong>
-                        Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.
-                    </li>
+                    <li><strong>break statement</strong> Terminates the loop or switch statement and transfers execution to the statement immediately following the loop or switch.</li>
+                    <li><strong>continue statement</strong> Causes the loop to skip the remainder of its body and immediately retest its condition prior to reiterating.</li>
                 </ul>
-                <code>
-                    using System;
-                    namespace Loops {
-                        class Program {
-                            static void Main(string[] args) {
-                                for (; ; ) {
-                                    Console.WriteLine("Hey! I am Trapped");
-                                }
-                            }
-                        }
-                    }
-                </code>
+                <pre><code>
+    using System;
+    namespace Loops {
+        class Program {
+            static void Main(string[] args) {
+                for (; ; ) {
+                    Console.WriteLine("Hey! I am Trapped");
+                }
+            }
+        }
+    }
+                </code></pre>
             </article>
         </section>
-
+    
         <section class="main-section" id="arrays">
             <header>
                 <h1>Arrays</h1>
             </header>
             <article>
-                <p>
-                    An array stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, 
-                    but it is often more useful to think of an array as a collection of variables of the same type stored at contiguous memory locations
-                </p>
-
+                <p>An array stores a fixed-size sequential collection of elements of the same type. An array is used to store a collection of data, but it is often more useful to think of an array as a collection of variables of the same type stored at contiguous memory locations.</p>
                 <ul class="arrays-concept">
-                    <li>
-                        <strong>Multi-dimensional arrays</strong>
-                        C# supports multidimensional arrays. The simplest form of the multidimensional array is the two-dimensional array
-                    </li>
-                    <li>
-                        <strong>Jagged arrays</strong>
-                        C# supports multidimensional arrays, which are arrays of arrays.
-                    </li>
-                    <li>
-                        <strong>Passing arrays to functions</strong>
-                        You can pass to the function a pointer to an array by specifying the array's name without an index.
-                    </li>
-                    <li>
-                        <strong>Param arrays</strong>
-                        This is used for passing unknown number of parameters to a function.
-                    </li>
-                    <li>
-                        <strong>The Array Class</strong>
-                        Defined in System namespace, it is the base class to all arrays, and provides various properties and methods for working with arrays.
-                    </li>
+                    <li><strong>Multi-dimensional arrays</strong> C# supports multidimensional arrays. The simplest form of the multidimensional array is the two-dimensional array.</li>
+                    <li><strong>Jagged arrays</strong> C# supports multidimensional arrays, which are arrays of arrays.</li>
+                    <li><strong>Passing arrays to functions</strong> You can pass to the function a pointer to an array by specifying the array's name without an index.</li>
+                    <li><strong>Param arrays</strong> This is used for passing an unknown number of parameters to a function.</li>
+                    <li><strong>The Array Class</strong> Defined in System namespace, it is the base class to all arrays, and provides various properties and methods for working with arrays.</li>
                 </ul>
-
-                <code>
-                    using System;
-                    namespace ArrayApplication {
-                        class MyArray {
-                            static void Main(string[] args) {
-                                int []  n = new int[10]; /* n is an array of 10 integers */
-                                int i,j;
-
-                                /* initialize elements of array n */
-                                for ( i = 0; i < 10; i++ ) {
-                                    n[ i ] = i + 100;
-                                }
-
-                                /* output each array element's value */
-                                for (j = 0; j < 10; j++ ) {
-                                    Console.WriteLine("Element[{0}] = {1}", j, n[j]);
-                                }
-                                Console.ReadKey();
-                            }
-                        }
-                    }
-                </code>
+                <pre><code>
+    using System;
+    namespace ArrayApplication {
+        class MyArray {
+            static void Main(string[] args) {
+                int []  n = new int[10]; /* n is an array of 10 integers */
+                int i,j;
+    
+                /* initialize elements of array n */
+                for ( i = 0; i < 10; i++ ) {
+                    n[ i ] = i + 100;
+                }
+    
+                /* output each array element's value */
+                for (j = 0; j < 10; j++ ) {
+                    Console.WriteLine("Element[{0}] = {1}", j, n[j]);
+                }
+                Console.ReadKey();
+            }
+        }
+    }
+                </code></pre>
             </article>
         </section>
     </main>
+    
 </body>
 </html>
