@@ -8,11 +8,13 @@
 </head>
 <body>
     <nav id="navbar">
-        <header></header>
+        <header>
+            <h1>C# Documentation</h1>
+        </header>
         <ul>
             <li><a href="#hello_world">Hello World!</a></li>
             <li><a href="#data_types">Data Types</a></li>
-            <li><a href=""></a></li>
+            <li><a href="#variables">Variables</a></li>
             <li><a href=""></a></li>
             <li><a href=""></a></li>
         </ul>
@@ -32,49 +34,49 @@
                 </p>
                 <p>Let us look at implementation of a Rectangle class and discuss C# basic syntax:</p>
                 <code>
-                    using System;
-                    namespace RectangleApplication {
-                        class Rectangle {
-
-                            // member variables
-                            double length;
-                            double width;
-
-                            public void Acceptdetails() {
-                                length = 4.5; 
-                                width = 3.5;
+                        using System;
+                        namespace RectangleApplication {
+                            class Rectangle {
+    
+                                // member variables
+                                double length;
+                                double width;
+    
+                                public void Acceptdetails() {
+                                    length = 4.5; 
+                                    width = 3.5;
+                                }
+    
+                                public double GetArea() {
+                                    return length * width; 
+                                }
+    
+                                public void Display() {
+                                    Console.WriteLine("Length: {0}", length);
+                                    Console.WriteLine("Width: {0}", width);
+                                    Console.WriteLine("Area: {0}", GetArea());
+                                }
                             }
-
-                            public double GetArea() {
-                                return length * width; 
-                            }
-
-                            public void Display() {
-                                Console.WriteLine("Length: {0}", length);
-                                Console.WriteLine("Width: {0}", width);
-                                Console.WriteLine("Area: {0}", GetArea());
+    
+                            class ExecuteRectangle {
+                                static void Main(string[] args) {
+                                    Rectangle r = new Rectangle();
+                                    r.Acceptdetails();
+                                    r.Display();
+                                    Console.ReadLine(); 
+                                }
                             }
                         }
-
-                        class ExecuteRectangle {
-                            static void Main(string[] args) {
-                                Rectangle r = new Rectangle();
-                                r.Acceptdetails();
-                                r.Display();
-                                Console.ReadLine(); 
-                            }
-                        }
-                    }
-                </code>
+                    </code>
                 <p>When the above code is compiled and executed, it produces the following result:</p>
                 <code>
-                    Length: 4.5
-                    Width: 3.5
-                    Area: 15.75
-                </code>
+                        Length: 4.5
+                        Width: 3.5
+                        Area: 15.75
+                    </code>
             </article>
         </section>
-
+    
         <section class="main-section" id="data_types">
             <header>
                 <h1>Data Types</h1>
@@ -86,29 +88,56 @@
                         <li>Pointer types</li>
                     </ul>
                     <h2>Value type</h2>
-                    <p>Value type variables can be assigned a value directly. They are derived from the class <strong>System.ValueType</strong></p>
+                    <p>Value type variables can be assigned a value directly. They are derived from the class
+                        <strong>System.ValueType</strong></p>
                     <code>
-                        using System;
-                        namespace DataTypeApplication {
-                            class Program {
-                                static void Main(string[] args) {
-                                    Console.WriteLine("Size of int: {0}", sizeof(int));
-                                    Console.ReadLine();
+                            using System;
+                            namespace DataTypeApplication {
+                                class Program {
+                                    static void Main(string[] args) {
+                                        Console.WriteLine("Size of int: {0}", sizeof(int));
+                                        Console.ReadLine();
+                                    }
                                 }
                             }
-                        }
-                    </code>
+                        </code>
                     <p>When the above code is compiled and executed, it produces the following result:</p>
                     <code>
-                        Size of int: 4
-                    </code>
+                            Size of int: 4
+                        </code>
                 </article>
             </header>
         </section>
+    
+        <section class="main-section" id="variables">
+            <header>
+                <h1>Variables</h1>
+            </header>
+            <article>
+                <p>
+                    A variable is nothing but a name given to a storage area that our programs can manipulate.
+                    Each variable in C# has a specific type, which determines the size and layout of the variable's memory the range 
+                    of values that can be stored within that memory and the set of operations that can be applied to the variable.
+                </p>
 
-        <section class="main-section" id="">
-            <header></header>
+                <ul>
+                    <li>Integral types</li>
+                    <li>Floating Point types</li>
+                    <li>Decimal types</li>
+                    <li>Boolean types</li>
+                    <li>Nullable types</li>
+                </ul>
+
+                <code>
+                    int d = 3, f = 5;    /* initializing d and f. */
+                    byte z = 22;         /* initializes z. */
+                    double pi = 3.14159; /* declares an approximation of pi. */
+                    char x = 'x';        /* the variable x has the value 'x'. */
+                </code>
+            </article>
         </section>
+
+
         <main class="main-section" id="">
             <header></header>
         </main>
